@@ -1,0 +1,88 @@
+@import "../../../index.styl";
+.login
+    display flex 
+    align-items center
+    background #222
+    position fixed
+    top 0 
+    bottom 0 
+    left 0 
+    right 0
+
+.login-box 
+    margin 70px auto
+    padding 40px 
+    line-height 1.5em
+    background #f4f4f4
+    width 60%
+    border-radius 5px
+
+.login-main div 
+    margin-top 20px
+
+.login-main input 
+    inputStyles()
+.login-submit 
+    display flex 
+    justify-content flex-start
+    margin-top 30px
+    width 100%
+    button
+        padding 7px
+        background #333
+        color #f4f4f4 
+        width 20%
+        border-radius 10px
+        text-decoration none
+        &:hover 
+            opacity .5
+
+    a  
+        margin-left auto
+        &:hover 
+            cursor pointer
+            text-decoration underline
+.login-options 
+    margin-top 30px
+    width 100% 
+.login-other a
+    color lighten(blue, 30%)
+.login-other a:hover
+    text-decoration underline
+.login-codebox
+    padding 20px 
+    position: fixed; 
+    background #DDD 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h4 
+        padding 10px
+    button, a
+        display block 
+        flex 100%
+        padding 10px 
+        text-decoration none
+        color #f4f4f4
+        width 100%
+        margin-top 20px
+
+#subCode
+    background green
+#closeSub
+    background red
+
+#overlay 
+    display block 
+    position fixed 
+    top 0 
+    bottom 0 
+    left 0 
+    right 0 
+    background rgba(#000, .5)
+    width 100% 
+    height 100vh
+
+@media screen and (max-width 968px)
+    .login-box 
+        width 80%

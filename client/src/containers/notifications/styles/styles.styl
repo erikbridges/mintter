@@ -1,0 +1,48 @@
+.notification-main
+    padding 20px
+    min-height 100vh
+    display flex 
+    justify-content center
+    flex-wrap wrap
+.notification-title
+    flex 100%
+    margin-bottom auto
+    text-align center
+    span 
+        font-size 2rem
+        font-family "Open-Sans", Arial, Helvetica, sans-serif
+        letter-spacing 20px
+.notification-list 
+    flex 1 100%
+    margin-bottom auto
+.notification-box
+    border 1px solid #333
+    padding 10px 
+    border-radius 10px
+    min-height 100px
+    margin-bottom auto
+    width 70%
+    margin 10px auto
+    display flex
+    align-items center
+    cursor pointer
+    &:hover 
+        opacity .5
+    .notification-box-title
+        margin-left auto
+        padding-right 20px
+
+.notification-icon
+    display flex
+    align-items center
+    span 
+        margin-top auto
+        display block
+        margin-bottom 30px
+        &:hover 
+            opacity .5
+
+
+@media screen and (max-width 968px)
+    .notification-box
+        width 100%

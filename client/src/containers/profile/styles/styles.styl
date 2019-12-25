@@ -1,0 +1,239 @@
+// Navbar Profile 
+.navbar-profile 
+    display flex 
+    position absolute
+    width 100%
+    align-items center
+    left 0 
+    right 0
+    padding-right 50px
+    padding-left 50px
+    a  
+        margin-right 30px
+        color #f4f4f4
+        &:hover 
+            opacity .5
+.navbar-end 
+    margin-left auto
+    display flex 
+    align-items center
+.navbar-search 
+    display flex 
+    align-items center
+    margin-top 30px
+    input 
+        display block
+        background transparent
+        border none
+        padding-bottom 10px
+        color #f4f4f4
+        border-bottom 1px solid #FFF
+    a 
+        margin-bottom 40px
+        color #f4f4f4
+        &:hover 
+            opacity .5
+
+// Profile
+.profile
+    display flex 
+    min-height 100vh
+    flex-wrap wrap
+    justify-content center
+    overflow hidden
+
+.profile-flex 
+    flex 1 50%
+    background #f4f4f4
+    padding 20px
+
+.flex-20 
+    flex 1 20%
+
+// Background Image 
+.profile-background 
+    flex 1 100%
+    min-height 400px
+    background #333
+    display flex 
+    align-items center 
+    color #f4f4f4 
+    justify-content center
+
+// Navbar Profile 
+.navbar-profile 
+    display flex 
+    flex 100%
+
+// 1st Side of the Profile
+.profile-side
+    position relative
+    min-height: 100vh
+    display flex 
+    align-items center
+
+// Profile Image
+.profile-img-wrap 
+    position absolute
+    top 0
+    transform translateY(-150px) translateX(40%)
+    display block 
+    margin 0 auto
+    img  
+        width 100%
+        border-radius 50%
+
+.profile-sidebar
+    display flex 
+    justify-content flex-start
+
+
+.profile-sidebar div 
+    margin-left auto
+
+.profile-sidebar > span, .profile-sidebar > div span 
+    display inline-block
+    margin 10px
+    background #DDD
+    padding 10px 15px
+    border-radius 20px
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif
+    span  
+        font-weight bold
+        display inline
+        font-family inherit
+
+    &:hover 
+        opacity .5
+        cursor pointer
+
+.profile-btn-wrap
+     margin-top 100px
+
+.profile-btn-wrap button 
+    display block
+    width 100% 
+    border none 
+    background green 
+    color #f4f4f4 
+    border-radius 2px
+    padding 10px
+    cursor pointer
+    &:hover 
+        opacity .5
+
+// Profile Bio 
+.profile-bio 
+    font-family Arial, Helvetica, sans-serif
+    text-align justify
+    padding-top 100px
+    margin-bottom auto
+    p 
+        margin-top 5px 
+        line-height 1.5rem
+        font-size 0.95rem
+    span    
+        display block
+        margin-top 30px
+
+.profile-handle
+    color lighten(blue, 10%)
+    font-weight bold
+    font-size 1.2rem
+// Tweet Box 
+.profile-tweet
+    border 1px solid #DDD
+    padding 20px
+    font-family: Arial, Helvetica, sans-serif
+    position relative
+    min-height 200px
+    display flex 
+    align-items center
+    margin 10px
+
+.tweet 
+    font-size 3rem
+    font-weight 200
+.hashtag 
+    color darken(aqua, 20%)
+    &:hover 
+        text-decoration underline
+        cursor pointer
+#website 
+    cursor pointer
+    color darkblue
+    margin-top 20px
+    &:hover 
+        text-decoration underline
+.profile-status 
+    padding 10px
+    margin-top 20px
+    position absolute 
+    bottom 0
+    right 0 
+    > span 
+        margin 5px
+        > span 
+            margin 10px
+
+.profile-thumb&:hover
+    color green
+    cursor pointer
+
+.profile-cmt&:hover
+    color blue
+    cursor pointer
+
+.profile-reply&:hover 
+     cursor pointer
+     opacity .5
+
+.profile-time 
+    position absolute 
+    top 0 
+    left 0
+    padding 10px 
+    color darken(#DDD, 50%)
+
+.comment-gen 
+    width 100%
+    padding 20px
+    border-radius 5px
+    min-height 100px 
+    background lighten(blue, 70%)
+    textarea 
+        width 100%
+        min-height 100px
+        padding 10px
+        font-size 1rem
+        font-family Arial, Helvetica, sans-serif
+        resize none
+    button  
+        margin-top 20px
+        font-weight bold
+        border none 
+        background green
+        color #f4f4f4
+        padding 10px
+        border-radius 5px
+        &:hover 
+            opacity .5
+            cursor pointer
+
+@media screen and (max-width 568px)
+    // Profile Nav 
+    .navbar-profile  
+        padding-left 10px 
+        padding-right 10px
+    .navbar-nav
+        flex 100%
+        // Profile Image
+    .profile-img-wrap 
+        position absolute
+        top 0
+        img
+            display block  
+            width 100%
+            margin 0 auto
+    .profile-sidebar
+        display block

@@ -1,0 +1,79 @@
+.login 
+    display flex 
+    align-items center
+    justify-content center
+    flex-wrap wrap
+
+    
+.login-flex 
+    flex 1
+    padding 20px 
+    min-height 100vh
+    font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+    color #f4f4f4
+    display flex 
+    align-items center
+    position relative
+    &:nth-child(1)
+        background transparent
+    &:nth-child(2)
+        color #333
+        background darken(#f4f4f4, 5%)
+
+.login-flex div 
+    span 
+        position relative
+        display block
+        margin 50px
+        font-size 1.5rem
+        z-index 99
+
+
+
+.login-video video
+    position absolute
+    top 0
+    left 0
+    width 100%
+    min-height 100vh
+    object-fit cover
+    z-index -1
+
+.login-video:after 
+    content "" 
+    display block 
+    min-height 100vh 
+    background rgba(#000, .5)
+    position absolute 
+    top 0 
+    bottom 0 
+    left 0 
+    right 0 
+
+// Login Section 
+.login__section
+    width 70%
+    margin 0 auto
+    a, button 
+        display block
+        margin-top 20px
+        width 100%
+        padding 10px 13px
+        background darken(#EEE, 20%)
+        border none 
+        cursor pointer
+        border-radius 5px
+        text-decoration none 
+        text-align center
+        color #333
+        &:hover 
+            opacity .5 
+.login__icon
+    margin 20px
+#login 
+    background green;
+    color #f4f4f4
+
+@media screen and (max-width 968px)
+    .login-flex 
+        flex 100%

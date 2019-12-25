@@ -1,0 +1,90 @@
+
+.nav-color 
+    background #222222
+    display block 
+    width 100% 
+    height 300px
+
+.w-70 
+    width 70%
+    margin 0 auto
+    display block
+
+.profile-tweet-main 
+    min-height 300px
+    cursor pointer
+    
+
+
+.comment-input 
+    padding 10px 
+    background lighten(gray, 60%)
+    display flex 
+    justify-content space-around
+.comment-input textarea
+    resize none
+    width 100%
+    height 50px
+    padding 5px
+    font-family Arial, Helvetica, sans-serif
+    border-radius 5px
+    border 1px solid #DDD
+.comment-input button
+    background aqua 
+    color #f4f4f4
+    flex 20%
+    border none
+    &:hover 
+        opacity .5
+        cursor pointer
+.comment-list 
+    padding 10px
+    margin-top 40px
+    min-height 500px
+
+.comment
+    display flex
+    justify-content center
+    align-items center
+    line-height 1.5em
+    font-family Arial, Helvetica, sans-serif
+    position relative
+    border 1px solid #DDD
+    padding 20px
+    border-radius: 4px
+    flex-wrap wrap 
+.comment-user 
+    display block
+    flex 100%
+.comment-user h1 
+    display inline-block 
+    float left
+    padding 10px 0px
+    font-size 1rem
+.comment-user span 
+    float right
+    font-style italic
+    color darken(#DDD, 30%)
+.comment-image 
+    border-radius 50%
+    float left
+    margin-right 20px 
+.comment-icons 
+    position absolute
+    left 0
+    top 0
+    padding 15px
+    font-weight bold
+    font-size 1.4rem
+.comment-main 
+    line-height 1.5em
+
+
+::placeholder
+   display flex 
+   align-items center
+    
+
+@media screen and (max-width 968px)
+    .w-70 
+        width 100%
