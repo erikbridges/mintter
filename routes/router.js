@@ -25,9 +25,13 @@ const UnFollow = require("./controllers/DeleteFollow");
 _____________________________*/
 const PostComment = require("./controllers/PostComment");
 const DisplayComments = require("./controllers/DisplayComments");
+const EditComment = require("./controllers/EditComment");
 const Reply = require("./controllers/Reply");
-const ReplyList = require("./controllers/ReplyList");
-const DeleteReply = require("./controllers/DeleteReply");
+
+/* SEARCH CONTROLLERS 
+_____________________________*/
+const Search = require("./controllers/Search");
+
 /* Body Parser
 ____________________________*/
 const bodyParser = require("koa-bodyparser");
@@ -150,13 +154,29 @@ router.del(
 );
 
 // LIST OF COMMENTS BY BLOG ID
-
+router.post(
+  "/display-comments",
+  async (ctx, next) => await DisplayComments(ctx, next)
+);
 // LEAVE A COMMENT
+router.post("/new-comment", async (ctx, next) => await PostComment(ctx, next));
 
 // EDIT A COMMENT
+router.patch(
+  "/edit-comment",
+  async (ctx, next) => await EditComment(ctx, next)
+);
 
 // DELETE A COMMENT
+router.delete(
+  "/delete-comment",
+  async (ctx, next) => await DeleteComment(ctx, next)
+);
 
-// REPLY TO A COMMENT0
+// REPLY TO A COMMENT
+router.delete("/reply", async (ctx, next) => await Reply(ctx, next));
+
+// SEARCH ROUTE
+router.post("/search", async (ctx, next) => await Search(ctx, next));
 
 module.exports = router;

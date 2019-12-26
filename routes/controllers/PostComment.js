@@ -1,6 +1,8 @@
 const db = require("../../database/db");
 const randomString = require("randomstring");
 const { validatePost } = require("../validators/validators");
+const Boom = require("@hapi/boom");
+
 const PostComment = async (ctx, next) => {
   const { post_id, post } = ctx.request.body;
   const checkToken = await authToken(ctx);

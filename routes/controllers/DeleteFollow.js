@@ -1,4 +1,5 @@
 const db = require("../../database/db");
+const Boom = require("@hapi/boom");
 
 const Follow = async (ctx, next) => {
   const { following_id } = ctx.request.body;

@@ -81,6 +81,18 @@ module.exports = {
     // Remove any profanity if any and sanitize the post from bad html.
     return { post: filter.clean(post) };
   },
+  validateQuery: function(query) {
+    // Validate the search query
+    // Min 2 max of 100.
+    const isValidLength = validator.isLength(query, { min: 2, max: 100 });
+    if (!isValidLength) {
+      return {
+        error: true,
+        errorMessage: "Your search query is too long or too short!"
+      };
+    }
+    return true;
+  },
   isHuman: function(item) {
     const isReqHuman = googleRecaptcha.verify({ response: item }, error => {
       if (error) {

@@ -2,6 +2,7 @@ const db = require("../../database/db");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { isHuman } = require("../../validators/validators");
+const Boom = require("@hapi/boom");
 
 const matchUserAction = async (matchedUser, loginCredent) => {
   // Check if the passwords are the same

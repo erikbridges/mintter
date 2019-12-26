@@ -1,7 +1,7 @@
 const db = require("../../database/db");
+const Boom = require("@hapi/boom");
 
 const Follow = async (ctx, next) => {
-  const { _id, following_id } = ctx.request.body;
   // Authenticate the user
   const checkToken = await authToken(ctx);
   if (!checkToken) {
