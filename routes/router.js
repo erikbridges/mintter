@@ -12,12 +12,22 @@ const DeleteUser = require("./controllers/DeleteUser");
 ____________________________*/
 const CreateTweet = require("./controllers/CreateTweet");
 const ShowTweetsById = require("./controllers/ShowTweetsById");
+const EditTweet = require("./controllers/EditTweet");
+const DeleteTweet = require("./controllers/DeleteTweet");
 
 /* FOLLOW CONTROLLERS 
-____________________________*/
+_______________________________*/
+const Follow = require("./controllers/Follow");
+const FollowStatus = require("./controllers/FollowStatus");
+const UnFollow = require("./controllers/DeleteFollow");
 
 /* REPLY CONTROLLERS COMMENT SYSTEM
 _____________________________*/
+const PostComment = require("./controllers/PostComment");
+const DisplayComments = require("./controllers/DisplayComments");
+const Reply = require("./controllers/Reply");
+const ReplyList = require("./controllers/ReplyList");
+const DeleteReply = require("./controllers/DeleteReply");
 /* Body Parser
 ____________________________*/
 const bodyParser = require("koa-bodyparser");
@@ -105,7 +115,48 @@ router.post(
 );
 
 // EDIT TWEET
+router.patch(
+  "/post",
+  bodyParser(),
+  async (ctx, next) => await EditTweet(ctx, next)
+);
 
 // DELETE TWEET
+router.delete(
+  "/post",
+  bodyParser(),
+  async (ctx, next) => await DeleteTweet(ctx, next)
+);
+
+// FOLLOW
+router.post(
+  "/follow",
+  bodyParser(),
+  async (ctx, next) => await Follow(ctx, next)
+);
+
+// GET LIST OF FOLLOWERS
+router.get(
+  "/follow",
+  bodyParser(),
+  async (ctx, next) => await FollowStatus(ctx, next)
+);
+
+// GET LIST OF FOLLOWERS
+router.del(
+  "/unfollow/:id",
+  bodyParser(),
+  async (ctx, next) => await UnFollow(ctx, next)
+);
+
+// LIST OF COMMENTS BY BLOG ID
+
+// LEAVE A COMMENT
+
+// EDIT A COMMENT
+
+// DELETE A COMMENT
+
+// REPLY TO A COMMENT0
 
 module.exports = router;

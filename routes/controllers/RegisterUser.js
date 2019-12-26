@@ -89,7 +89,7 @@ const RegisterUser = async (ctx, next) => {
     username,
     email,
     hash,
-    bio,
+    bio: validChecks[3].post,
     is_valid: false,
     valid_token: validToken
   };

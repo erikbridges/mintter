@@ -10,12 +10,23 @@ const DeleteUser = async (ctx, next) => {
   if (!checkToken) {
     return ctx.throw(Boom.forbidden("Unauthorized Token Unidentified."));
   }
-  // Check to see if the password matches 
-  const targetUser = await db("users").select("*").where("_id", _id);
+  // Check to see if the password matches
+  const targetUser = await db("users")
+    .select("*")
+    .where("_id", _id);
   const comparePass = await bcrypt.compare(password, targetUser[0].hash);
   if (!comparePass) {
     return ctx.throw(Boom.forbidden("Invalid password combination."));
   }
+  // Delete all the user's posts
+  await db("posts")
+    .del()
+    .where("author", _id);
+  // Switch Comments to Deleted Account
+  await db("replies")
+    .update("deleted_account", true)
+    .where("author", _id);
+
   // Delete the user
   await db("users")
     .del()
