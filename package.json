@@ -17,7 +17,7 @@
     "@koa/multer": "^2.0.1",
     "@reach/router": "^1.2.1",
     "@sendgrid/mail": "^6.4.0",
-    "aws-sdk": "^2.581.0",
+    "aws-sdk": "^2.814.0",
     "bad-words": "^3.0.3",
     "bcryptjs": "^2.4.3",
     "chalk": "^3.0.0",
